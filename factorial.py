@@ -1,7 +1,8 @@
 import time
 final_list = []
 
-def factorial(n) :
+
+def factorial(n):
     """Return the factorial of n, an exact integer >= 0.
 
     >>> [factorial(n) for n in range(6)]
@@ -32,6 +33,7 @@ def factorial(n) :
     for i in range (1, n+1):
         factorial = factorial * i
     return factorial
+
 
 def sum_factorial():
     for i in range(50):
