@@ -46,7 +46,8 @@ jobs:
     needs: job2
     runs-on: ubuntu-latest
     steps:
-      - run: |
-        echo "Building solution..."
-        sleep 10
-        echo "Build complete"
+      - name: Running build
+        run: |
+          echo "Building solution..."
+          sleep 10
+          echo "Build complete"
