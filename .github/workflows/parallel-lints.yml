@@ -45,9 +45,19 @@ jobs:
     name: Build
     needs: job2
     runs-on: ubuntu-latest
+    env:
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     steps:
       - name: Running build
         run: |
           echo "Building solution..."
           sleep 10
           echo "Build complete"
+      - name: Notify Slack
+        uses: act10ns/slack@v1
+        with:
+          status: ${{ job.status }}
+          steps: ${{ toJson(steps) }}
+          channel: '#github-actions-test'
+        if: always()
+            
