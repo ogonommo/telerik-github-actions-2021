@@ -1,4 +1,4 @@
-name: Lint check
+name: Parallel Lint check / Message Slack
 on:
   pull_request:
     paths:
