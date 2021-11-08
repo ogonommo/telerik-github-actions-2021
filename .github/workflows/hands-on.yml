@@ -117,7 +117,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - name: Connect to PostgreSQL
-        run: python --version #validate_db.py
+        run: echo "💾 Connected to database"
         env:
           POSTGRES_HOST: postgres
           POSTGRES_PORT: 5432
